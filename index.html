@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<link href="style.css" rel="stylesheet">
+		<title>Project Gizmo - Home</title>
+	</head>
+		
+	<body>
+		<div class="container_main" id="container">
+			<div id="banner"><a href="index.html">PROJECT GIZMO</a></div>
+			<ul>
+				<a href="index.html"><li class="active">Colour Picker</li></a>
+				<a href="comingsoon.html"><li>Coming soon!</li></a>
+				<li>Coming soon!</li>
+			</ul>
+			
+			<canvas width="720" height="405" id="canvas_picker"></canvas>
+		
+			<!--Uses HTML File API to upload a file to be read. Need to add validation here so only images are uploaded? Accept not compatible with all browsers-->
+			<div id="image_upload_div"><input type='file' id="image_upload" accept="image/*"/></div>
+		
+			<div id="colour_preview"></div>
+			<div class="colour_code">HEX: <input type="text" id="hex_text" size="10"/></div>
+			<div class="colour_code">RGB: <input type="text" id="rgb_text" size="10"/></div>
+		</div>
+		
+		<script src="main.js"></script>
+	</body>
+</html>
