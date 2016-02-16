@@ -1,31 +1,74 @@
-#banner{
-	height:80px;
-	padding:1%;
-	font-size:50px;
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	border:1px #000 dotted;
-	margin-bottom:-10px;
+/*Mobile styling*/
+@media screen and (max-width: 793px) {
+	#banner{
+		font-size:37px;
+		text-align:center;
+	}
+	.container_main{
+		width:99%;
+	}
+	#colour_preview{ 
+		width:90%;
+	}
+	nav {
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+	ul{	
+		width:690px;
+		overflow-x:scroll;
+	}
+	li {
+		display: inline-block;
+	}
 }
-ul{	
-    overflow: hidden;
-    background-color: #4DB94A;
-	height:50px;
+
+/*Non-mobile styling*/
+@media screen and (min-width: 794px) {
+	#banner{
+		font-size:50px;
+	}
+	.container_main{
+		width:75%;
+	}
+	ul{	
+		height:50px;
+		margin-bottom:60px;
+	}
+	li{
+		display:inline;	
+		font-size:20px;		
+		display:inline-block;
+		border-bottom: 1px #FFFFFF solid;
+	}
+	#colour_preview{ 
+		width:37%;
+	}
+}
+
+/*Styling for all devices*/
+#banner{
+		height:80px;
+		padding:1%;
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		border:1px #000 dotted;
+		margin-bottom:-10px;
+}
+ul{
+	background-color: #4DB94A;
 	vertical-align:middle;
-	margin-bottom:60px;
+	overflow: hidden;
+	list-style-type:none;
 }
 li{
-	display:inline;	
 	font-family: "Comic Sans MS", cursive, sans-serif;
-	font-size:20px;
 	text-align:center;
-	padding: 6px 15px 6px 15px;
-	display:inline-block;
-	color:#FFFFFF;
-	border-bottom: 1px #FFFFFF solid;
+	color:#FFFFFF;	
+	padding: 6px 15px 6px 15px;	
 }
 li:hover{
-	border-bottom: 4px #FFFFFF solid;
 	cursor:pointer;
+	border-bottom: 4px #FFFFFF solid;	
 }
 a {
 	color:inherit;
@@ -47,7 +90,6 @@ a {
 }	
 #colour_preview{ 
 	margin:auto;
-	width:37%;
 	height:50px;
 	border:1px #000 solid;  
 	box-shadow:1px 2px 2px #444444;
@@ -56,13 +98,13 @@ a {
 }	
 .colour_code{
 	margin:auto;
-	width:20%;
+	width:50%;
 	margin-bottom:10px;
+	text-align:center;
 }
 .container_main{
 	margin:auto;
-	width:65%;
-	background-color:#F7F5F5;
+	background-color:#F7F5F5;	
 }
 .active {
 	border-bottom: 4px #FFFFFF solid;

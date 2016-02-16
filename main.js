@@ -8,6 +8,18 @@ canvasMain.addEventListener('mousedown', previewColour);	//Run 'previewColour' f
 var rgbTextbox = document.getElementById("rgb_text");
 var hexTextbox = document.getElementById("hex_text");
 
+
+//Draw white background with text onto canvas
+canvasCtx.beginPath();
+canvasCtx.rect(1, 1, canvasMain.width, canvasMain.height);
+canvasCtx.fillStyle = "White";
+canvasCtx.fill();
+canvasCtx.font = "20px Comic Sans MS";
+canvasCtx.lineWidth = 1.8;
+canvasCtx.strokeText("Choose an image on your device and click to get the Hex",90,160);
+canvasCtx.strokeText("and RGB codes for the colour you clicked on!",140,210);
+
+
 //Draw selected image to canvas when file is loaded to array
 function loadImage(e){
 	var img = new Image();
@@ -36,7 +48,8 @@ function loadImage(e){
 		canvasCtx.drawImage(img,1,1,imgWidth,imgHeight);
 	}
 }			
-					
+			
+			
 //Updates background colour of preview div
 function previewColour(event_mouseMove){
 	var canvasOffset = $(canvasMain).offset();	//Gets position of the canvas to be used as offset
@@ -52,6 +65,7 @@ function previewColour(event_mouseMove){
 	
 	hexTextbox.value = rbgToHex(pixel[0], pixel[1], pixel[2]);	
 }
+
 
 //Parses rgb values as int then converts to base 16 string (hex) 
 function rbgToHex(r,g,b){
